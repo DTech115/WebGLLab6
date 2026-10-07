@@ -56,7 +56,7 @@ const directionalLight =
 const ambientLight =
     new THREE.AmbientLight(
     0xffffff,
-    1.0
+    0.2
 );
 
 directionalLight.position.set(
@@ -78,10 +78,6 @@ camera.position.z = 3;
 
 let theta = 0;
 
-let r = Math.abs(Math.sin(theta * 0.02));
-let g = Math.abs(Math.sin(theta * 0.03));
-let b = Math.abs(Math.sin(theta * 0.04));
-
 // Animation Loop
 function animate()
 {
@@ -97,9 +93,16 @@ function animate()
     directionalLight.position.y = Math.sin(theta);
 
     directionalLight.color.setRGB(
-        (Math.sin(theta * 0.5) + 1) / 2,
-        (Math.sin(theta * 0.3 + 2) + 1) / 2,
-        (Math.sin(theta * 0.4 + 4) + 1) / 2
+        // ===== for random RGB =====
+        // (Math.sin(theta * 0.5) + 1) / 2,
+        // (Math.sin(theta * 0.3 + 2) + 1) / 2,
+        // (Math.sin(theta * 0.4 + 4) + 1) / 2
+        
+        // ===== for purple light =====
+        0.5,
+        0,
+        0.5
+        
     );
     renderer.render(
         scene,
