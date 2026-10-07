@@ -52,9 +52,9 @@ Experiment with:
 
 Questions:
 
-1. What is ambient light?
+1. What is ambient light?  
 The natural light in a scene that is always present when viewable irl.
-2. What happens when ambient light increases?
+2. What happens when ambient light increases?  
 The entire cube gets brighter & shadows decrease
 
 ---
@@ -82,9 +82,9 @@ Try:
 
 Questions:
 
-1. Which faces become brighter?
+1. Which faces become brighter?  
 Whichever face is closest to the light source [i.e. 0,1,0 has the light directly above, ergo the top faces]
-2. Why?
+2. Why?  
 The position of the light directly affects which faces are lit up [light to the left = left faces bright]
 
 ---
@@ -119,9 +119,9 @@ Yellow
 
 Questions:
 
-1. Which color has highest contrast?
+1. Which color has highest contrast?  
 I want to say yellow or green just from being the brightest.
-2. Why do shadows remain dark?
+2. Why do shadows remain dark?  
 Directional lights tint the surfaces it directly illuminates, no shadows colored.
 
 ---
@@ -132,9 +132,9 @@ Observe the moving light source.
 
 Questions:
 
-1. Why do highlights move?
+1. Why do highlights move?  
 Because the light source moves
-2. Why does the cube appear different as it rotates?
+2. Why does the cube appear different as it rotates?  
 Because each surface changes its lighting/shadow
 
 ---
@@ -182,18 +182,28 @@ scene.add(
 
 Questions:
 
-1. How is a point light different from a directional light?
-2. Which resembles a light bulb?
+1. How is a point light different from a directional light?  
+Point lights have a specific position & emites light in all directions while directional light all comes down from one direction. 
+2. Which resembles a light bulb?  
+Point light [directional light is more akin to some huge source of light far away like the sun]
 
 ---
 
 ## Reflection Questions
 
-1. What is ambient lighting?
-2. What is directional lighting?
-3. What is point lighting?
-4. Why do we need normals?
-5. Why do some faces appear brighter?
-6. How does moving a light affect a scene?
-7. How does changing color affect realism?
-8. Why does Three.js make lighting easier than WebGL?
+1. What is ambient lighting?  
+Natural lighting that's just already there in the background
+2. What is directional lighting?  
+Light coming from a specific direction
+3. What is point lighting?  
+Light coming from a specific position, goes all out
+4. Why do we need normals?  
+They tell the renderer which way a surface faces & the lighting compares that direction with the light to see how much is lit up
+5. Why do some faces appear brighter?  
+Because the light is more focused/closer to that face
+6. How does moving a light affect a scene?  
+The side that's illuminated moves & so does
+7. How does changing color affect realism?  
+Natural looking light colors can add to realism while unnaturally saturated colors feel more stylized
+8. Why does Three.js make lighting easier than WebGL?  
+It gives more built-in lights/materials/shaders & calculations that WebGL would make you do yourself.
