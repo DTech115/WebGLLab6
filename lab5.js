@@ -48,9 +48,10 @@ scene.add(cube);
 // Single Directional Light
 const directionalLight =
     new THREE.DirectionalLight(
-        0xffffff,
+        0xff0000,
         1.0
     );
+
 
 const ambientLight =
     new THREE.AmbientLight(
@@ -59,9 +60,9 @@ const ambientLight =
 );
 
 directionalLight.position.set(
-    1,
-    1,
-    1
+    0,
+    -1,
+    0
 );
 
 scene.add(
@@ -74,6 +75,13 @@ scene.add(
 // Camera Position
 camera.position.z = 3;
 
+
+let theta = 0;
+
+let r = Math.abs(Math.sin(theta * 0.02));
+let g = Math.abs(Math.sin(theta * 0.03));
+let b = Math.abs(Math.sin(theta * 0.04));
+
 // Animation Loop
 function animate()
 {
@@ -81,9 +89,18 @@ function animate()
         animate
     );
 
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
+    cube.rotation.x += 0.02;
+    cube.rotation.y += 0.02;
+    theta += 0.05;
+    directionalLight.position.x = Math.sin(theta);
+    directionalLight.position.z = Math.cos(theta);
+    directionalLight.position.y = Math.sin(theta);
 
+    directionalLight.color.setRGB(
+        (Math.sin(theta * 0.5) + 1) / 2,
+        (Math.sin(theta * 0.3 + 2) + 1) / 2,
+        (Math.sin(theta * 0.4 + 4) + 1) / 2
+    );
     renderer.render(
         scene,
         camera

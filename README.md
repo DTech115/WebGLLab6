@@ -53,7 +53,9 @@ Experiment with:
 Questions:
 
 1. What is ambient light?
+The natural light in a scene that is always present when viewable irl.
 2. What happens when ambient light increases?
+The entire cube gets brighter & shadows decrease
 
 ---
 
@@ -81,7 +83,9 @@ Try:
 Questions:
 
 1. Which faces become brighter?
+Whichever face is closest to the light source [i.e. 0,1,0 has the light directly above, ergo the top faces]
 2. Why?
+The position of the light directly affects which faces are lit up [light to the left = left faces bright]
 
 ---
 
@@ -116,7 +120,9 @@ Yellow
 Questions:
 
 1. Which color has highest contrast?
+I want to say yellow or green just from being the brightest.
 2. Why do shadows remain dark?
+Directional lights tint the surfaces it directly illuminates, no shadows colored.
 
 ---
 
@@ -127,7 +133,9 @@ Observe the moving light source.
 Questions:
 
 1. Why do highlights move?
+Because the light source moves
 2. Why does the cube appear different as it rotates?
+Because each surface changes its lighting/shadow
 
 ---
 
