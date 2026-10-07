@@ -65,11 +65,27 @@ directionalLight.position.set(
     0
 );
 
+const pointLight =
+    new THREE.PointLight(
+        0x00ff00,
+        2
+    );
+
+pointLight.position.set(
+    3,
+    3,
+    3
+);
+
 scene.add(
     directionalLight
 );
 scene.add(
     ambientLight
+);
+
+scene.add(
+    pointLight
 );
 
 // Camera Position
@@ -97,7 +113,7 @@ function animate()
         // (Math.sin(theta * 0.5) + 1) / 2,
         // (Math.sin(theta * 0.3 + 2) + 1) / 2,
         // (Math.sin(theta * 0.4 + 4) + 1) / 2
-        
+
         // ===== for purple light =====
         0.5,
         0,
