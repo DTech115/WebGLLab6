@@ -52,6 +52,12 @@ const directionalLight =
         1.0
     );
 
+const ambientLight =
+    new THREE.AmbientLight(
+    0xffffff,
+    1.0
+);
+
 directionalLight.position.set(
     1,
     1,
@@ -60,6 +66,9 @@ directionalLight.position.set(
 
 scene.add(
     directionalLight
+);
+scene.add(
+    ambientLight
 );
 
 // Camera Position
